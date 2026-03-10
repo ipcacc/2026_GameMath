@@ -36,13 +36,25 @@ public class ClickToMove : MonoBehaviour
 
     void Update()
     {
-        if (isMoveing)
+        if (isMoving)
         {
-            Vector3 direction = new Vector3(isMoveing.x, isMoveing.y, 0); 
+            Vector3 direction = targetPosition - transform.position;
 
-            if ()
+            float sqrMagnitude = direction.x * direction.x + direction.y * direction.y + direction.z * direction.z;
+            float magnitude = Mathf.Sqrt(sqrMagnitude);
+
+            Vector3 normalizedVector;
+
+            if (magnitude > 0)
+                normalizedVector = direction / magnitude;
+            else
+                normalizedVector = Vector3.zero;
+
+            transform.Translate(normalizedVector * moveSpeed * Time.deltaTime);
+
+            if (magnitude < 0.1f)
             {
-                isMoveing = false;
+                isMoving = false;
             }
         }
     }
