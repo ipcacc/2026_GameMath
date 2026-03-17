@@ -15,6 +15,7 @@ public class FOV : MonoBehaviour
 
         if (angle < viewAngle / 2)
         {
+            transform.localScale = Vector3.one * 2;
             Debug.Log("플레이어가 시야 안에 있음");
         }
     }
