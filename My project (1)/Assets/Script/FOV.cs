@@ -3,11 +3,16 @@ using UnityEngine;
 public class FOV : MonoBehaviour
 {
     public Transform player;
-
     public float viewAngle = 60f;
+    public float view = 3f;
 
     void Update()
     {
+        float distance = Vector3.Distance(player.position, transform.position);
+
+        if (distance > view)
+            return;
+
         Vector3 toplayer = (player.position - transform.position).normalized;
         Vector3 forward = transform.forward;
 
@@ -17,6 +22,10 @@ public class FOV : MonoBehaviour
         {
             transform.localScale = Vector3.one * 2;
             Debug.Log("플레이어가 시야 안에 있음");
+        }
+        else
+        {
+            transform.localScale = Vector3.one;
         }
     }
 
