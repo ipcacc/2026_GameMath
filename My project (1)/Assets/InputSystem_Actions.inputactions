@@ -86,6 +86,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "L Parry",
+                    "type": "Value",
+                    "id": "51d49c33-e754-432e-a27d-3482ce1f732c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "R Parry",
+                    "type": "Value",
+                    "id": "328d5c55-68f0-46b5-84c6-cc72fd86c325",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -113,7 +131,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "e2062cb9-1b15-46a2-838c-2f8d72a0bdd9",
+                    "id": "7032f195-c701-4a5b-a9d8-7d4d403c7912",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
@@ -471,6 +489,28 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1c8c6c34-a714-4b73-8228-a5b6d9bcda68",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "L Parry",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f6e78905-e82b-4c63-aa07-38e8d64e76b8",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "R Parry",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
