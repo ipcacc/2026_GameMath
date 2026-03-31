@@ -27,7 +27,7 @@ public class PlayerMoving : MonoBehaviour
         float rotation = moveInput.x * rotationSpeed * Time.deltaTime;
         transform.Rotate(0f, rotation, 0f);
 
-        Vector3 moveDir = transform.forward * moveInput.y * moveSpeed * Time.deltaTime;
-        transform.Translate(moveDir);
+        Vector3 moveDir = moveInput.y * moveSpeed * Time.deltaTime * transform.forward;
+        transform.position += (moveDir);
     }
 }
